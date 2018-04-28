@@ -1,0 +1,12 @@
+<view class='top'>
+{{msg}}
+</view>
+<scroll-view scroll-y style="height: 80vh">
+<view wx:for="{{array}}" class='order'>
+ {{index + 1}}. {{item}}
+</view>
+</scroll-view>
+
+<view class='btn'>
+确定
+</view>

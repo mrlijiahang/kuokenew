@@ -1,0 +1,76 @@
+<!--pages/home/login/index.wxml-->
+<view class='content'>
+  <form bindsubmit="formSubmit">
+    <view class='item'> </view>
+    <view class='item'>
+      <view class='empty'></view>
+      <view class='input-view'>
+        <text class='input-title'>姓名</text>
+        <input name='inputName'class='inputName'></input>
+      </view>
+      <image class='empty' src='../../../images/home/state2.png'></image>
+    </view>
+    <view class='item'>
+      <view class='empty'></view>
+      <view class='input-view'>
+        <text class='input-title'>手机号</text>
+        <input name='inputPhone' class='inputName' type="number" maxlength="11"></input>
+      </view>
+      <image class='empty' src='../../../images/home/state3.png'></image>
+    </view>
+    <view class='item'>
+      <view class='empty'></view>
+      <view class='input-view'>
+        <text class='input-title'>验证码</text>
+        <input class='inputName' class='inputName' type="number" maxlength="4"></input>
+        <button class='code' disabled='{{disabled}}' bindtap="sendmessg">{{getMsg}}</button>
+      </view>
+      <view class='empty'></view>
+    </view>
+    <view class='item'>
+      <view class='empty'></view>
+      <view class='input-view'>
+        <text class='input-title'>公司名称</text>
+        <input name='inputCompany' class='inputName'></input>
+      </view>
+      <image class='empty' src='../../../images/home/state3.png'></image>
+    </view>
+    <view class='item'>
+      <view class='empty'></view>
+      <view class='input-view'>
+        <text class='input-title'>联系地址</text>
+        <input name='inputAddress'class='inputName' ></input>
+      </view>
+      <view class='empty'></view>
+    </view>
+    <view class='item'>
+      <view class='empty'></view>
+      <view class='input-view'>
+        <text class='input-title'>行业</text>
+        <input name='inputIndustry' class='inputName'></input>
+      </view>
+      <view class='empty'></view>
+    </view>
+    <view class='item'>
+      <view class='empty'></view>
+      <view class='input-view'>
+        <text class='input-title'>邮箱</text>
+        <input name='inputEmail' class='inputName'></input>
+      </view>
+      <image class='empty' src='../../../images/home/state3.png'></image>
+    </view>
+    <view class='item'>
+      <view class='empty'></view>
+      <view class='input-view'>
+        <text class='input-title'>网址</text>
+        <input name='inputUrl' class='inputName'></input>
+      </view>
+      <view class='empty'></view>
+    </view>
+    <button class='submitBtn' formType="submit">完  成</button>
+  </form>
+  <view class='desc'>请填写您的手机号方便我们的客服联系您</view>
+  <view class='desc2'>
+    <image class='dec2-img' src='../../../images/home/state1.png'></image>
+  </view>
+</view>

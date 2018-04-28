@@ -1,0 +1,47 @@
+/* pages/me/order/index.wxss */
+.content{
+  width: 100%;
+  height: 100vh;
+}
+.cell, .cell-image{
+  width: 100%;
+  height: 294rpx;
+}
+.cell{
+  position: relative;
+  margin-bottom: 10rpx;
+}
+.cell-title{
+  position: absolute;
+  top: 94rpx;
+  left: 32rpx;
+  font-size: 34rpx;
+  color: #fff;
+}
+.cell-desc{
+  position: absolute;
+  top: 140rpx;
+  left: 32rpx;
+  width: 495rpx;
+  word-break: break-all;
+  font-size: 20rpx;
+  color: #fff;
+  height: 55rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.cell-btn{
+  width: 148rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 117rpx;
+  right: 36rpx;
+  border: 1rpx #fff solid;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  font-size: 23rpx;
+}

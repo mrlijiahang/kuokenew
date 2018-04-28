@@ -1,0 +1,76 @@
+<!--pages/home/index.wxml-->
+<view class='content'>
+  <view class='header'>
+    <view class='header-content'>
+      <view class='list'>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/1.png'></image>
+          <text class='item-text'>数客调研</text>
+          <view class='item-cover' bindtap='click' data-index='1'></view>
+        </view>
+        <view class='empty'></view>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/2.png'></image>
+          <text class='item-text'>策略服务</text>
+          <view class='item-cover' bindtap='click' data-index='2'></view>
+        </view>
+        <view class='empty'></view>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/3.png'></image>
+          <text class='item-text'>广告服务</text>
+          <view class='item-cover' bindtap='click' data-index='3'></view>
+        </view>
+        <view class='empty'></view>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/4.png'></image>
+          <text class='item-text'>数据营销</text>
+          <view class='item-cover' bindtap='click' data-index='4'></view>
+        </view>
+        <view class='empty'></view>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/5.png'></image>
+          <text class='item-text'>社会化</text>
+          <view class='item-cover' bindtap='click' data-index='5'></view>
+        </view>
+      </view>
+      <view class='list'>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/6.png'></image>
+          <text class='item-text'>新闻营销</text>
+          <view class='item-cover' bindtap='click' data-index='6'></view>
+        </view>
+        <view class='empty'></view>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/7.png'></image>
+          <text class='item-text'>视频服务</text>
+          <view class='item-cover' bindtap='click' data-index='7'></view>
+        </view>
+        <view class='empty'></view>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/8.png'></image>
+          <text class='item-text'>会议服务</text>
+          <view class='item-cover' bindtap='click' data-index='8'></view>
+        </view>
+        <view class='empty'></view>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/9.png'></image>
+          <text class='item-text'>认证评测</text>
+          <view class='item-cover' bindtap='click' data-index='9'></view>
+        </view>
+        <view class='empty'></view>
+        <view class='item'>
+          <image class='item-img' src='../../images/home/10.png'></image>
+          <text class='item-text'>内容分发</text>
+          <view class='item-cover' bindtap='click' data-index='10'></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='cell' wx:for='{{dataSource}}' wx:key='index'>
+    <image class='cell-image' src='../../images/home/cell.png'></image>
+    <text class='cell-title'>{{item.name}}</text>
+    <text class='cell-desc'>{{item.desc}}</text>
+    <view class='cell-btn' data-type='2' data-item='{{index}}' catchtap='pushClick'>预  定</view>
+  </view>
+</view>

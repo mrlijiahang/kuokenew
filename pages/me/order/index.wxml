@@ -1,0 +1,9 @@
+<!--pages/me/order/index.wxml-->
+<view class='content'>
+  <view class='cell' wx:for='{{dataSource}}' wx:key='index'>
+    <image class='cell-image' src='../../../images/home/cell.png'></image>
+    <text class='cell-title'>{{item.name}}</text>
+    <text class='cell-desc'>{{item.desc ? item.desc : ''}}</text>
+    <view class='cell-btn'>已预订</view>
+  </view>
+</view>

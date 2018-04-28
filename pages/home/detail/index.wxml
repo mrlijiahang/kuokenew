@@ -1,0 +1,6 @@
+<!--pages/home/detail/index.wxml-->
+<view class='content'>
+  <image class='headerImg' src="{{'http://huoke.chinabyte.net'+ dataSource.icon}}"></image>
+  <rich-text nodes="{{dataSource.desc}}" class='richText'></rich-text>
+  <button wx:if="{{isShow}}" class='reserveBtn'>预定</button>
+</view>
