@@ -10,15 +10,57 @@ Page({
   },
   submit: function(){
     console.log('是否有手机号')
+    console.log(wx.getStorageSync('abc'))
     if (wx.getStorageSync('needPerfect') === true){
       // 调用借口
+      wx.request({
+        url: 'http://huoke.chinabyte.net/index.php/order/add_order',
+        method:'POST',
+        header:{
+          'content-type': 'application/x-www-form-urlencoded',
+          'Cookie': 'ci_session=' + wx.getStorageSync('sessionId')
+        },
+        data:{
+          uid: wx.getStorageSync('userId'),
+          cids: wx.getStorageSync('abc')
+        },
+        success:res=>{
+          if(res.data.code === 1000){
+            wx.showToast({
+              title: '订单提交成功',
+              icon: 'success',
+              duration: 2000,
+              mask: true,
+              success:()=>{
+                setTimeout(function(){
+                  wx.navigateBack({
+                    delta: 2
+                  })
+                },1500)
+              }
+            })  
+          } else {
+            wx.showToast({
+              title: '订单提交失败',
+              icon: 'none',
+              duration: 2000,
+              mask: true,
+              success: () => {
+                setTimeout(function () {
+                  wx.navigateBack({
+                    delta: 1
+                  })
+                }, 1500)
+              }
+            })
 
-      wx.showToast({
-        title: '订单提交成功',
-        icon: 'success',
-        duration: 2000,
-        mask: true
-      })  
+          }
+          
+        }
+
+      })
+
+  
 
     } else if (wx.getStorageSync('needPerfect') === false){
       wx.navigateTo({

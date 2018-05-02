@@ -34,6 +34,7 @@ Page({
       },
       success: res => {
         console.log(res)
+        wx.setStorageSync('needPerfect', true);
         wx.navigateBack({
           delta: 1
         })
@@ -62,6 +63,7 @@ Page({
       },
       success :function(res){
         console.log('成功')
+        
         console.log(res)
       },    
     })
