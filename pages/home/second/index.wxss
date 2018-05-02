@@ -115,8 +115,8 @@
   position: absolute;
   top: 120rpx;
   right: 40rpx;
-  width: 30rpx;
-  height: 30rpx;
+  width: 38rpx;
+  height: 38rpx;
 }
 
 /*设置底部css*/

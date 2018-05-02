@@ -68,7 +68,7 @@
   </view>
 
   <view class='cell' wx:for='{{dataSource}}' wx:key='index'>
-    <image class='cell-image' src='../../images/home/cell.png'></image>
+    <image class='cell-image' src="{{'http://huoke.chinabyte.net'+item.icon}}"></image>
     <text class='cell-title'>{{item.name}}</text>
     <text class='cell-desc'>{{item.desc}}</text>
     <view class='cell-btn' data-type='2' data-item='{{index}}' catchtap='pushClick'>预  定</view>

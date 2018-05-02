@@ -8,6 +8,26 @@ Page({
     msg: '您的订单',
     array: []
   },
+  submit: function(){
+    console.log('是否有手机号')
+    if (wx.getStorageSync('needPerfect') === true){
+      // 调用借口
+
+      wx.showToast({
+        title: '订单提交成功',
+        icon: 'success',
+        duration: 2000,
+        mask: true
+      })  
+
+    } else if (wx.getStorageSync('needPerfect') === false){
+      wx.navigateTo({
+        url: '../login/index',
+      })
+     
+    }
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */

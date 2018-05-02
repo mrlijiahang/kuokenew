@@ -7,6 +7,6 @@
 </view>
 </scroll-view>
 
-<view class='btn'>
+<view class='btn' catchtap='submit'>
 确定
 </view>

@@ -33,6 +33,7 @@ class Session {
             wx.getUserInfo({
               success: res => {
                 that.setUserInfo(res.userInfo.nickName, res.userInfo.avatarUrl);
+                that.needPerfect(wx.getStorageSync('userId'))
               },
               fail: function () {
                 console.log('授权失败');
@@ -63,6 +64,8 @@ class Session {
       method: 'POST',
       success: function (res) {
         if (!res.data.data.telephone) {
+          wx.setStorageSync('needPerfect', false);
+        } else {
           wx.setStorageSync('needPerfect', true);
         }
       }

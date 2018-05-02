@@ -19,7 +19,7 @@ Page({
       url: 'http://huoke.chinabyte.net/index.php/user/update_user',
       method:'POST',
       data:{
-        "uid" : wx.getStorageSync('uid').toString(),
+        "uid": wx.getStorageSync('userId').toString(),
         "name": e.detail.value.inputName.toString(),
         "telephone":e.detail.value.inputPhone.toString(),
         "company": e.detail.value.inputCompany.toString(),
@@ -30,14 +30,16 @@ Page({
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded',
-        'Cookie': 'ci_session=' + wx.getStorageSync('sessionID')
+        'Cookie': 'ci_session=' + wx.getStorageSync('sessionId')
       },
       success: res => {
         console.log(res)
+        wx.navigateBack({
+          delta: 1
+        })
       }
 
     })
-
     console.log(e.detail.value.inputName)
     console.log(e.detail.value.inputPhone)
     console.log(e.detail.value.inputCompany)
@@ -56,7 +58,7 @@ Page({
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded',
-        'Cookie':'ci_session='+wx.getStorageSync('sessionID')
+        'Cookie': 'ci_session=' + wx.getStorageSync('sessionId')
       },
       success :function(res){
         console.log('成功')
