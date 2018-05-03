@@ -37,5 +37,12 @@ Page({
     wx.navigateTo({
       url: './detail/index?type=' + e.currentTarget.dataset.type + '&item=' + e.currentTarget.dataset.item,
     })
-  }
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '获客营销',
+      desc: '一款神奇的营销程序',
+      path: '/pages/home/index'
+    }
+  },
 })

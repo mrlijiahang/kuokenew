@@ -16,6 +16,7 @@ Page({
       },
       method: 'POST',
       success: function(res) {
+        console.log(res)
         that.setData({
           dataSource: res.data.data.orders
         })
