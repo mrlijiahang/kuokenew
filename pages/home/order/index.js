@@ -6,6 +6,7 @@ Page({
    */
   data: {
     msg: '您的订单',
+    num: wx.getStorageSync('abc').length,
     array: []
   },
   submit: function(){
@@ -77,7 +78,7 @@ Page({
     this.setData({
       array: wx.getStorageSync('abc1')
     })
-    console.log(this.data.array+ 'dasdsa')
+    console.log(this.data.array)
 
   },
 

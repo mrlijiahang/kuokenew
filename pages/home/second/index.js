@@ -49,10 +49,14 @@ Page({
       for (let x = 0; x < 4; x++) {
         if (dataSource[i].list[x].isSelect) {
           chooseArr.push(dataSource[i].list[x].cid)
-          chooseArr1.push(dataSource[i].list[x].name)
+          chooseArr1.push({name:dataSource[i].list[x].name ,img:dataSource[i].list[x].image})
         }
       }
     }
+    console.log(JSON.stringify(chooseArr1))
+    console.log(this.data.detail)
+   
+    
     wx.setStorageSync('abc', chooseArr);
     wx.setStorageSync('abc1', chooseArr1);
     this.setData({
@@ -61,6 +65,7 @@ Page({
   },
   reservationClick: function () {
     console.log(wx.getStorageSync('abc'));
+    console.log(wx.getStorageSync('abc2'))
     wx.navigateTo({
       url: '../order/index',
     })

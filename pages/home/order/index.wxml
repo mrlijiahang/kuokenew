@@ -1,12 +1,21 @@
-<view class='top'>
-{{msg}}
-</view>
-<scroll-view scroll-y style="height: 80vh">
+
+<scroll-view scroll-y style="height: 91vh;background:#eee">
 <view wx:for="{{array}}" class='order'>
- {{index + 1}}. {{item}}
+<view style='padding:20rpx'>
+<image src="{{'http://huoke.chinabyte.net'+item.img}}" style='width:150rpx;height:150rpx;float:left;'></image>
+</view>
+<view style='float:left;margin-left:30rpx'>
+{{item.name}}
+</view>
+<view style=' position:relative;left:130rpx;top:80rpx'>
+X1
+</view>
+
 </view>
 </scroll-view>
 
 <view class='btn' catchtap='submit'>
-确定
+<view style='float:left;margin-left:35%;color:#05adfe;margin-top:2rpx' >合计： X{{num}}</view>
+<view class='btnok'>提交订单</view>
+
 </view>
