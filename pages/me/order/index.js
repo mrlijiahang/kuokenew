@@ -6,7 +6,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://huoke.chinabyte.net/index.php/order/order_list',
+      url: 'https://huoke.chinabyte.com/index.php/order/order_list',
       data: {
         uid: wx.getStorageSync('userId')
       },
@@ -16,7 +16,7 @@ Page({
       },
       method: 'POST',
       success: function(res) {
-        console.log(res)
+        console.log(res.data.data.orders)
         that.setData({
           dataSource: res.data.data.orders
         })

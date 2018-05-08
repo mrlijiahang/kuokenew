@@ -1,4 +1,4 @@
-Page({  
+Page({
   data: {
     indexSize: 0,
     indicatorDots: false,
@@ -13,6 +13,34 @@ Page({
     this.setData({
       indexSize: options.index - 1,
       detail: JSON.parse(wx.getStorageSync('listData'))
+    })
+  },
+  bgclick: function (e) {
+    var indexSize = this.data.indexSize;
+    var index = e.currentTarget.dataset.index;
+    var select = e.currentTarget.dataset.select;
+    let start = 'detail[' + indexSize + '].list[' + index + '].isSelect';
+    let isSelect = this.data.detail[indexSize].list[index].isSelect;
+    this.setData({
+      [start]: !isSelect
+    })
+    // 我自己写的
+    // 数据源
+    var dataSource = this.data.detail;
+    var chooseArr = [];
+    var chooseArr1 = [];
+    for (let i = 0; i < 10; i++) {
+      for (let x = 0; x < 4; x++) {
+        if (dataSource[i].list[x].isSelect) {
+          chooseArr.push(dataSource[i].list[x].cid)
+          chooseArr1.push({ name: dataSource[i].list[x].name, img: dataSource[i].list[x].image })
+        }
+      }
+    }
+    wx.setStorageSync('abc', chooseArr);
+    wx.setStorageSync('abc1', chooseArr1);
+    this.setData({
+      msg: wx.getStorageSync('abc').length
     })
   },
   itemClick: function (e) {
@@ -31,43 +59,21 @@ Page({
       indexSize: e.target.dataset.index
     })
   },
-  imageClick: function (e) {
-    var indexSize = this.data.indexSize;
-    var index = e.target.dataset.index;
-    var select = e.target.dataset.select;
-    let start = 'detail[' + indexSize + '].list[' + index + '].isSelect';
-    let isSelect = this.data.detail[indexSize].list[index].isSelect;
-    this.setData({
-      [start]: !isSelect
-    })
-    // 我自己写的
-    // 数据源
-    var dataSource = this.data.detail;
-    var chooseArr = [];
-    var chooseArr1 = [];
-    for (let i = 0; i < 10; i++) {
-      for (let x = 0; x < 4; x++) {
-        if (dataSource[i].list[x].isSelect) {
-          chooseArr.push(dataSource[i].list[x].cid)
-          chooseArr1.push({name:dataSource[i].list[x].name ,img:dataSource[i].list[x].image})
-        }
-      }
-    }
-    console.log(JSON.stringify(chooseArr1))
-    console.log(this.data.detail)
-   
-    
-    wx.setStorageSync('abc', chooseArr);
-    wx.setStorageSync('abc1', chooseArr1);
-    this.setData({
-      msg: wx.getStorageSync('abc').length
-    })
+  imgClick() {
+    console.log(1)
   },
   reservationClick: function () {
-    console.log(wx.getStorageSync('abc'));
-    console.log(wx.getStorageSync('abc2'))
-    wx.navigateTo({
-      url: '../order/index',
-    })
+    console.log(this.data.msg)
+    if (this.data.msg == '0') {
+      wx.showToast({
+        title: '请选择服务',
+        icon: 'none',
+        duration: 2000,
+      })
+    } else {
+      wx.navigateTo({
+        url: '../order/index',
+      })
+    }
   }
 })

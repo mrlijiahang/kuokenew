@@ -13,7 +13,7 @@
 }
 .cell-title{
   position: absolute;
-  top: 94rpx;
+  top: 124rpx;
   left: 32rpx;
   font-size: 34rpx;
   color: #fff;

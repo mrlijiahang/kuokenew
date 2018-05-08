@@ -12,7 +12,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://huoke.chinabyte.net/index.php/category/category_list',
+      url: 'https://huoke.chinabyte.com/index.php/category/category_list',
       data: {
         'is_show': 1
       },
@@ -34,6 +34,7 @@ Page({
     })
   },
   pushClick: function (e) {
+   
     wx.navigateTo({
       url: './detail/index?type=' + e.currentTarget.dataset.type + '&item=' + e.currentTarget.dataset.item,
     })

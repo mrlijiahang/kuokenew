@@ -2,9 +2,10 @@ Page({
   onLoad: function (options) {
     let data1 = JSON.parse(wx.getStorageSync('listData'));
     let data2 = JSON.parse(wx.getStorageSync('showData'));
+    
     console.log(data2);
-    console.log(options.item);
-    console.log(data2[parseInt(options.item)]);
+    // console.log(options.item);
+    // console.log(data2[parseInt(options.item)]);
     let type = options.type;
     if (type === '1') {
       this.setData({
@@ -22,7 +23,7 @@ Page({
     // 调用订单接口那一套
     if (wx.getStorageSync('needPerfect') === true) {
       wx.request({
-        url: 'http://huoke.chinabyte.net/index.php/order/add_order',
+        url: 'https://huoke.chinabyte.com/index.php/order/add_order',
         method: 'POST',
         header: {
           'content-type': 'application/x-www-form-urlencoded',

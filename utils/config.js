@@ -1,9 +1,8 @@
 class Config {
   constructor() {
-
   }
 }
-Config.restUrl = 'http://huoke.chinabyte.net/index.php/';
+Config.restUrl = 'https://huoke.chinabyte.com/index.php/';
 Config.code1 = 1000; //请求成功
 Config.code2 = 2000; //网络请求参数错误
 Config.code3 = 2002; //验证码发送失败

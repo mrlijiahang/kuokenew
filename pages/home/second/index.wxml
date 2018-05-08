@@ -16,10 +16,12 @@
       <swiper-item wx:for="{{detail}}" wx:for-item="item" wx:key="index" class="swiper-item">
         <block wx:for="{{detail[indexSize].list}}" wx:key="index" item="item" wx:for-index="index">
           <view class='cell'>
-            <image class='cell-image' src="{{'http://huoke.chinabyte.net'+item.image}}"></image>
+          <image class='cell-image' src="{{'https://huoke.chinabyte.com'+item.image}}"></image>
             <text class='cell-title'>{{item.name}}</text>
             <view class='cell-desc' data-indexes="{{indexSize}}" data-index="{{index}}" data-type='1' catchtap='itemClick'>详情</view>
-            <image class='cell-img' src="{{item.isSelect == true ? '../../../images/home/delete.png' : '../../../images/home/add.png'}}" catchtap='imageClick' data-index='{{index}}' data-select='{{item.isSelect}}'></image>
+            <view  bindtap='bgclick' style='width:100rpx;height:100rpx;float:right;margin-top:70rpx;position:relative;z-index:100' data-index='{{index}}' data-select='{{item.isSelect}}'> 
+            <image class='cell-img' src="{{item.isSelect == true ? '../../../images/home/delete.png' : '../../../images/home/add.png'}}"></image>
+            </view>
           </view>
         </block>
       </swiper-item>

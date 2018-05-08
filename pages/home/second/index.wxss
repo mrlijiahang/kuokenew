@@ -113,7 +113,7 @@
 }
 .cell-img{
   position: absolute;
-  top: 120rpx;
+   top: 40rpx; 
   right: 40rpx;
   width: 38rpx;
   height: 38rpx;
