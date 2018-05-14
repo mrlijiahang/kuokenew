@@ -1,0 +1,4 @@
+<!--pages/start/index.wxml-->
+<button wx:if="{{firstLogin}}" open-type="getUserInfo" 
+    bindgetuserinfo="bindGetUserInfo"
+>授权登录</button>

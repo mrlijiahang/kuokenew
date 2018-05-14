@@ -6,10 +6,10 @@ class Session {
   }
   // 检查本地是否缓存有session
   verify() {
-    // var session = wx.getStorageSync('session');
-    // if (!session) {
-    //   this.getSessionFromServer();
-    // }
+    var firstLogin = wx.getStorageSync('firstLogin');
+    if (!firstLogin) {
+      wx.setStorageSync('firstLogin', 'true')
+    }
     this.getSessionFromServer();
   }
   // 没有就去服务器获取session
@@ -30,17 +30,18 @@ class Session {
           fail: function (res) { },
           complete: function (res) {
             // 获取用户信息
-            wx.getUserInfo({
-              success: res => {
-                that.setUserInfo(res.userInfo.nickName, res.userInfo.avatarUrl);
-                that.needPerfect(wx.getStorageSync('userId'))
-              },
-              fail: function () {
-                console.log('授权失败');
-                wx.setStorageSync('userName', '未授权');
-                wx.setStorageSync('avatarUrl', 'http://www.chinabyte.com/w/n/yanghao/img/nj.jpg');
-              }
-            })
+            // wx.getUserInfo({
+            //   success: res => {
+            //     that.setUserInfo(res.userInfo.nickName, res.userInfo.avatarUrl);
+            //     that.needPerfect(wx.getStorageSync('userId'))
+            //   },
+            //   fail: function (e) {
+            //     console.log('授权失败');
+            //     console.log(e);
+            //     wx.setStorageSync('userName', '未授权');
+            //     wx.setStorageSync('avatarUrl', 'http://www.chinabyte.com/w/n/yanghao/img/nj.jpg');
+            //   }
+            // })
           },
         })
       }

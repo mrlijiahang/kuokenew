@@ -138,7 +138,7 @@ Page({
   sendmessg: function(){
     console.log('获取验证码');
     wx.request({
-      url: 'https://huoke.chinabyte.net/index.php/generic/sms_code',
+      url: 'https://huoke.chinabyte.com/index.php/generic/sms_code',
       method:'POST',
       data:{
         mobile: this.data.telphone.toString()
@@ -149,7 +149,7 @@ Page({
       },
       success :res=>{
         console.log('成功')
-        // console.log(res)
+        console.log(res)
       },    
     })
 

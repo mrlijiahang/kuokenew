@@ -1,0 +1,4 @@
+/* pages/start/index.wxss */
+Page{
+  background-color: red;
+}
