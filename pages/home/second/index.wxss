@@ -145,7 +145,7 @@
   text-align: center;
   font-size: 36rpx;
   color: black;
-  background-color: #ecf8ff; 
+  background-color: #4d8dff; 
 }
 .btnleft{
   float: left;
@@ -158,6 +158,6 @@
 .btnright{
   float: right;
   width: 70%;
-  /* font-size: 20rpx; */
-   border: 1px solid black
+   border: 1px solid black;
+   color: white;
 }

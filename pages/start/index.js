@@ -12,7 +12,7 @@ Page({
         wx.switchTab({
           url: '../home/index'
         })
-      }, 2000);
+      }, 3000);
     }
   },
   bindGetUserInfo: function (e) {

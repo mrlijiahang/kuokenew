@@ -16,11 +16,27 @@ Page({
       },
       method: 'POST',
       success: function(res) {
-        console.log(res.data.data.orders)
+        // console.log(res.data.data.orders.map((item)=>{
+        //   return item.create_time
+        // }))
+        // that.setData({
+        //   dataSource: res.data.data.orders
+        // })
+        res.data.data.orders.map((item) => {
+          item.create_time = that.timestampToTime(item.create_time)
+        })
         that.setData({
           dataSource: res.data.data.orders
         })
       }
     })
+  },
+  timestampToTime(timestamp) {
+    var date = new Date(timestamp * 1000);
+    var Y = date.getFullYear() + '-';
+    var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+    var D = date.getDate() + ' ';
+    return Y+ M + D;
   }
+
 })

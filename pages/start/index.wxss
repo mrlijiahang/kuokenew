@@ -1,4 +1,9 @@
-/* pages/start/index.wxss */
-Page{
-  background-color: red;
+.btn{
+  position: absolute;
+  width: 50%;
+  height: 50px;
+  bottom: 80rpx;
+  left: 175rpx;
+  margin: 0 auto;
+  text-align: center
 }

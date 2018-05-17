@@ -13,19 +13,19 @@
 }
 .cell-title{
   position: absolute;
-  top: 124rpx;
+  top: 54rpx;
   left: 32rpx;
   font-size: 34rpx;
   color: #fff;
 }
 .cell-desc{
   position: absolute;
-  top: 140rpx;
+  color: black;
+  bottom: 20rpx;
   left: 32rpx;
   width: 495rpx;
   word-break: break-all;
-  font-size: 20rpx;
-  color: #fff;
+  font-size: 25rpx;
   height: 55rpx;
   display: -webkit-box;
   -webkit-box-orient: vertical;

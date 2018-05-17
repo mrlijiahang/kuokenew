@@ -1,4 +1,13 @@
 <!--pages/start/index.wxml-->
-<button wx:if="{{firstLogin}}" open-type="getUserInfo" 
+
+<image class='start' src="../../images/home/start.png" style='width:100%;height:100vh'>
+<button  class="btn" wx:if="{{firstLogin}}" open-type="getUserInfo" 
     bindgetuserinfo="bindGetUserInfo"
->授权登录</button>
+>开始体验</button>
+</image>
+
+
+
+
+
+
