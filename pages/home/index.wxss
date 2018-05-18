@@ -43,13 +43,14 @@
   flex: 1;
 }
 .item-img{
-  width: 82rpx;
-  height: 82rpx;
+  width: 90rpx;
+  height: 90rpx;
 }
 .item-text{
-  width: 82rpx;
+   width: 90rpx; 
   height: 24rpx;
-  font-size: 20rpx;
+  font-size: 22rpx;
+  font-weight: bolder;
   text-align: center;
 }
 .cell, .cell-image{
@@ -62,20 +63,20 @@
 }
 .cell-title{
   position: absolute;
-  top: 94rpx;
+  top: 70rpx;
   left: 32rpx;
-  font-size: 34rpx;
+  font-size: 40rpx;
   color: #fff;
 }
 .cell-desc{
   position: absolute;
-  top: 140rpx;
+  top: 142rpx;
   left: 32rpx;
   width: 495rpx;
   word-break: break-all;
-  font-size: 20rpx;
+  font-size: 30rpx;
   color: #fff;
-  height: 55rpx;
+  /* height: 80rpx; */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;

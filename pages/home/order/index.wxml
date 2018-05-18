@@ -13,9 +13,7 @@ x1
 
 </view>
 </scroll-view>
-
 <view class='btn' catchtap='submit'>
 <view style='float:left;margin-left:35%;color:#05adfe;margin-top:2rpx' >合计： x{{num}}</view>
 <view class='btnok'>提交订单</view>
-
 </view>

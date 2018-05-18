@@ -1,8 +1,13 @@
 <!--pages/me/order/index.wxml-->
 <view class='content'>
   <view class='cell' wx:for='{{dataSource}}' wx:key='index'>
-    <image class='cell-image' src='../../../images/home/history.png'></image>
-    <text class='cell-title' style='color:black'>{{item.cname}}</text>
-    <text class='cell-desc'>{{item.create_time}}</text>
+    <!-- <image class='cell-image' src='../../../images/home/history.png'></image> -->
+    <text class='cell-time'>{{item.create_time}}</text>
+      <view class="cell-name" wx:for='{{item.cname}}' wx:key='index1'>
+      <image  style="float:left;margin-left:50rpx;width: 130rpx;height: 130rpx" src='../../../images/home/item3.png'></image>
+      <view style='float:left;margin-left:32rpx;line-height:130rpx'>{{item}}</view>
+      
+      </view>     
+    
   </view>
 </view>

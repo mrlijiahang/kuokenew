@@ -85,24 +85,10 @@ Page({
               icon: 'loading',
               duration: 1500
             })
-
-
           }
         }
       })
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     console.log(e.detail.value.inputName)
     console.log(e.detail.value.inputPhone)
@@ -125,7 +111,6 @@ Page({
         icon: 'loading',
         duration: 1500
       })
-      
     }else{
       wx.request({
         url: 'https://huoke.chinabyte.com/index.php/generic/sms_code',
@@ -142,7 +127,6 @@ Page({
           console.log(res)
         },
       })
-
       var timer = this.data.timer;
       if (timer == 1) {
         var that = this;
@@ -165,8 +149,6 @@ Page({
           }
         }, 1000)
       }
-
     }
- 
   }
 })

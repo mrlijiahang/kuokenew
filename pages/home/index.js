@@ -43,7 +43,7 @@ Page({
     return {
       title: '获客营销',
       desc: '一款神奇的营销程序',
-      path: '/pages/home/index'
+      path: '/pages/start/index'
     }
   },
 })

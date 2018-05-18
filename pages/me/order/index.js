@@ -1,7 +1,8 @@
 // pages/me/order/index.js
 Page({
   data: {
-    dataSource:[]
+    dataSource:[],
+    dataSourcename:[]
   },
   onLoad: function (options) {
     var that = this;
@@ -16,18 +17,22 @@ Page({
       },
       method: 'POST',
       success: function(res) {
-        // console.log(res.data.data.orders.map((item)=>{
-        //   return item.create_time
-        // }))
-        // that.setData({
-        //   dataSource: res.data.data.orders
-        // })
+        // console.log(res);
         res.data.data.orders.map((item) => {
-          item.create_time = that.timestampToTime(item.create_time)
+          item.create_time = that.timestampToTime(item.create_time);
+          item.cname = item.cname.split(',')
         })
+        var data = 
         that.setData({
           dataSource: res.data.data.orders
+          // // dataSourcename: res.data.data.orders.map((item)=>{
+          // //   return item.cname.split(',')
+          // // })
+          // dataSource: res.data.data.orders.map((item)=>{
+          //   item.cname = item.cname.split(',')
+          // })
         })
+        console.log(that.data.dataSource)
       }
     })
   },

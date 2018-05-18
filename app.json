@@ -1,13 +1,16 @@
 {
   "pages":[
     "pages/start/index",
+    "pages/me/order/index",
+    
     "pages/home/login/index",
     "pages/home/index",
     "pages/home/order/index",
+   
     "pages/home/second/index",
     "pages/me/index",
     "pages/home/detail/index",
-    "pages/me/order/index",
+    
     "pages/me/orderDetail/index"    
   ],
   "window":{

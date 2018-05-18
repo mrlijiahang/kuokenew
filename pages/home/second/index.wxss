@@ -36,7 +36,8 @@
 
 .scroll-view-item {
   flex: 1;
-  font-size: 24rpx;
+  font-size: 28rpx;
+  font-family: 600;
   color: #666;
   border-left: 8rpx solid transparent;
   display: flex;

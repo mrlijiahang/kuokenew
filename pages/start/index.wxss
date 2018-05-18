@@ -3,7 +3,7 @@
   width: 50%;
   height: 50px;
   bottom: 80rpx;
-  left: 175rpx;
+  left: 190rpx;
   margin: 0 auto;
   text-align: center
 }
