@@ -1,0 +1,61 @@
+/* pages/me/order/index.wxss */
+.content{
+  width: 100%;
+  height: 100vh;
+}
+.cell, .cell-image{
+  width: 100%;
+  /* height: 294rpx; */
+}
+.cell{
+  width: 91%;
+  position: relative;
+  padding-top: 20rpx;
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  margin: 0 auto 10rpx;
+}
+.cell-title{
+  position: absolute;
+  top: 54rpx;
+  left: 32rpx;
+  font-size: 34rpx;
+  color: #fff;
+}
+.cell-time{
+
+width: 141rpx;
+  border-bottom: 2px solid #d0d0d0;
+  color: #d0d0d0;
+
+  word-break: break-all;
+  font-size: 25rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding-bottom:10rpx;
+  margin-bottom:20rpx; 
+}
+.cell-name{
+  /* width: 91%; */
+  height: 150rpx;
+  margin: 0 auto 20rpx;
+  padding-top: 20rpx;
+   line-height: 150rpx; 
+  border-left: 2px solid #4d8dff;
+  box-shadow: 1px 1px 5px gray;
+}
+.cell-btn{
+  width: 148rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 117rpx;
+  right: 36rpx;
+  border: 1rpx #fff solid;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  font-size: 23rpx;
+}

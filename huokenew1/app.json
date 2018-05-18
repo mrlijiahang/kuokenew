@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/start/index",
+    "pages/me/order/index",
+    
+    "pages/home/login/index",
+    "pages/home/index",
+    "pages/home/order/index",
+   
+    "pages/home/second/index",
+    "pages/me/index",
+    "pages/home/detail/index",
+    
+    "pages/me/orderDetail/index"    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#EFEFF5",
+    "navigationBarTitleText": "数客调研",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "backgroundColor": "#efeff4",
+    "color": "#000",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "列表",
+        "iconPath": "./images/me/tabbar1.png",
+        "selectedIconPath": "./images/me/tabbar1_h.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "./images/me/tabbar2.png",
+        "selectedIconPath": "./images/me/tabbar2_h.png"
+      }
+    ]
+  }
+}

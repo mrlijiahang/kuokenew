@@ -1,0 +1,19 @@
+
+<scroll-view scroll-y style="height: 91vh;background:#eee">
+<view wx:for="{{array}}" class='order'>
+<view style='padding:20rpx'>
+<image src="{{'https://huoke.chinabyte.com'+item.img}}" style='width:150rpx;height:150rpx;float:left;'></image>
+</view>
+<view style='float:left;margin-left:50rpx'>
+{{item.name}}
+</view>
+<view style=' float:right;margin-right:30rpx;margin-top:80rpx'>
+x1
+</view>
+
+</view>
+</scroll-view>
+<view class='btn' catchtap='submit'>
+<view style='float:left;margin-left:35%;color:#05adfe;margin-top:2rpx' >合计： x{{num}}</view>
+<view class='btnok'>提交订单</view>
+</view>
