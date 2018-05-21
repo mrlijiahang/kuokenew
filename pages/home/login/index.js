@@ -42,8 +42,6 @@ Page({
           sms_code: this.data.sms.toString()
         },
         success: res => {
-          console.log('短信验证')
-          console.log(res)
           if (res.data.code == 1000) {
             console.log(res.data.data)
             // 验证成功才行
@@ -83,15 +81,12 @@ Page({
             wx.showToast({
               title: '请填写验证码',
               icon: 'loading',
-              duration: 1500
+              duration: 1500 
             })
           }
         }
       })
     }
-
-    console.log(e.detail.value.inputName)
-    console.log(e.detail.value.inputPhone)
   },
   telInput: function (e) {
     this.setData({
@@ -104,7 +99,6 @@ Page({
     })
   },
   sendmessg: function (e) {
-    console.log('获取验证码');
     if (this.data.telphone.length !== 11){
       wx.showToast({
         title: '请填写手机号',
